@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      2.4
+// @version      2.5
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -187,7 +187,7 @@ Siempre que el cliente escriba algo similar a
 *"Hola, vi la promoción del 50% en Bitel y quiero activar mi línea. ¿Me pueden ayudar por favor?"*,  
 responde con esta bienvenida:
 
-> ¡Hola! 😊 Gracias por escribirnos y por tu interés en la promo del 50% de descuento en Bitel. Soy Frank y te guiaré en todo el proceso para activar tu línea.
+> ¡Holaaaaa! 😊 Gracias por escribirnos y por tu interés en la promo del 50% de descuento en Bitel. Soy Frank y te guiaré en todo el proceso para activar tu línea.
 >
 > ¿Te gustaría que te detalle los planes disponibles con la promoción, o ya tienes uno en mente? Si tienes alguna duda también dime, ¡estoy aquí para ayudarte! 🚀
 
