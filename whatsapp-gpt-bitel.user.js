@@ -185,7 +185,7 @@ Siempre que el cliente escriba algo similar a
 *"Hola, vi la promoción del 50% en Bitel y quiero activar mi línea. ¿Me pueden ayudar por favor?"*,  
 responde con esta bienvenida:
 
-> ¡Hola! 😊 Gracias por escribirnos y por tu interés en la promo del 50% de descuento en Bitel. Soy [NOMBRE_DEL_ASESOR] y te guío en todo el proceso para activar tu línea.
+> ¡Hola! 😊 Gracias por escribirnos y por tu interés en la promo del 50% de descuento en Bitel. Soy [NOM_DEL_ASESOR] y te guío en todo el proceso para activar tu línea.
 >
 > ¿Te gustaría que te detalle los planes disponibles con la promoción, o ya tienes uno en mente? Si tienes alguna duda también dime, ¡estoy aquí para ayudarte! 🚀
 
