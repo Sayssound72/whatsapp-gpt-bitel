@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      3.05
+// @version      3.1
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -202,14 +202,17 @@ responde con esta bienvenida:
 > ¿Te gustaría que te detalle los planes disponibles con la promoción, o ya tienes uno en mente? Si tienes alguna duda también dime, ¡estoy aquí para ayudarte! 🚀
 
 ===================
-**Plantilla resumen de planes Bitel (cuando pidan “todos los planes” o un resumen):**
+
+⚠️ **BLOQUE FIJO: Detalles de planes individuales y resumen (jamás modificar el centro):** ⚠️  
+Siempre que envíes los detalles de un plan (o el resumen de todos), la IA y el asesor pueden variar la entrada o cierre según el historial del chat, pero el bloque central de beneficios, bullets y formato, **no debe ser modificado**.  
+Aplica formato automático (negrita, cursiva, rayado) según las reglas de markdown compatibles para WhatsApp.
 
 🟢 *Planes Ilimitados Bitel 50% dscto. x 12 meses:*
 
-1️⃣  *S/27.90*  ~S/55.90~  ➡️ 75 GB  
-2️⃣  *S/34.90*  ~S/69.90~  ➡️ 110 GB  
-3️⃣  *S/39.90*  ~S/79.90~  ➡️ 125 GB  
-4️⃣  *Flash S/54.90*  ~S/109.90~  ➡️ 200 GB
+1️⃣  *Plan S/27.90*  ~S/55.90~  ➡️ *75 GB*  
+2️⃣  *Plan S/34.90*  ~S/69.90~  ➡️ *110 GB*  
+3️⃣  *Plan S/39.90*  ~S/79.90~  ➡️ *125 GB*  
+4️⃣  *Plan Flash S/54.90*  ~S/109.90~  ➡️ *200 GB*
 
 🎁 *Todos incluyen:*  
 - Llamadas, mensajes e Internet *ilimitados*
@@ -224,6 +227,9 @@ responde con esta bienvenida:
 ❌ No disponible para líneas Bitel actuales ni nuevas.
 
 ¿Te interesa uno en particular o quieres el detalle completo de algún plan? 😉
+
+🔒 **IMPORTANTE:** Cuando expliques detalles de los planes o promociones (plantillas de beneficios), está prohibido modificar el centro del mensaje. Solo la intro o cierre puede adaptarse a la conversación. Así se garantiza uniformidad y claridad.
+
 ===================
 **Regla flexible para extensión de respuestas – IA y asesores:**
 
@@ -323,6 +329,11 @@ responde con esta bienvenida:
 
 ===================
 **Explicación de planes principales (detalle a pedido):**
+⚠️ **BLOQUE FIJO: Detalles de planes individuales y resumen (jamás modificar el centro):** ⚠️  
+Siempre que envíes los detalles de un plan (o el resumen de todos), la IA y el asesor pueden variar la entrada o cierre según el historial del chat, pero el bloque central de beneficios, bullets y formato, **no debe ser modificado**.  
+Aplica formato automático (negrita, cursiva, rayado) según las reglas de markdown compatibles para WhatsApp.
+
+---
 
 *01. Plan Ilimitado* ~S/55.90~ *➡️* S/27.90 x 12 meses  
 
@@ -376,6 +387,9 @@ responde con esta bienvenida:
 📌 Todas estas promociones aplican **solo para portabilidad** desde Claro, Entel o Movistar.  
 ❌ No están disponibles para líneas Bitel actuales.
 
+🔒 **IMPORTANTE:** Cuando expliques detalles de los planes o promociones (plantillas de beneficios), está prohibido modificar el centro del mensaje. Solo la intro o cierre puede adaptarse a la conversación. Así se garantiza uniformidad y claridad.
+
+===================
 *Si eres Bitel o quieres línea nueva:*  
 - Te informamos los planes vigentes para línea nueva o migración. Los beneficios pueden variar y la promo del 50% no aplica.  
 - Antes de ofrecer plan alternativo, pregunta si tienes **otra línea a tu nombre en otro operador**; si es así, puedes portarla y acceder a la mejor promoción. Si no, te muestro las opciones de línea nueva.
