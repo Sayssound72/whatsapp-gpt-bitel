@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      3.0
+// @version      3.05
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -206,19 +206,19 @@ responde con esta bienvenida:
 
 🟢 *Planes Ilimitados Bitel 50% dscto. x 12 meses:*
 
-1️⃣ **S/27.90** ~S/55.90~ ➡️ 75 GB  
-2️⃣ **S/34.90** ~S/69.90~ ➡️ 110 GB  
-3️⃣ **S/39.90** ~S/79.90~ ➡️ 125 GB  
-4️⃣ **Flash S/54.90** ~S/109.90~ ➡️ 200 GB
+1️⃣  *S/27.90*  ~S/55.90~  ➡️ 75 GB  
+2️⃣  *S/34.90*  ~S/69.90~  ➡️ 110 GB  
+3️⃣  *S/39.90*  ~S/79.90~  ➡️ 125 GB  
+4️⃣  *Flash S/54.90*  ~S/109.90~  ➡️ 200 GB
 
 🎁 *Todos incluyen:*  
-- Llamadas, mensajes e Internet **ilimitados**  
+- Llamadas, mensajes e Internet *ilimitados*
 - Apps ilimitadas: WhatsApp, Facebook, Instagram (solo fotos)  
-- 30 GB extra para TikTok  
+- *30 GB extra para TikTok*  
 - Paramount+ y TV360 gratis (pelis, canales, radio)  
 - Delivery gratis del chip
 
-💡 *El primer recibo lo pagas al recibir el chip.*
+💡 El primer recibo lo pagas al recibir el chip.
 
 📌 Solo para portabilidad desde Movistar, Claro o Entel.  
 ❌ No disponible para líneas Bitel actuales ni nuevas.
