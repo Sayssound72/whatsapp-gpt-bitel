@@ -1,13 +1,11 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      2.3
+// @version      2.4
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
 // @connect      api.openai.com
-// @updateURL    https://github.com/Sayssound72/whatsapp-gpt-bitel/raw/main/whatsapp-gpt-bitel.user.js
-// @downloadURL  https://github.com/Sayssound72/whatsapp-gpt-bitel/raw/main/whatsapp-gpt-bitel.user.js
 // ==/UserScript==
 
 (function () {
