@@ -6,6 +6,8 @@
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
 // @connect      api.openai.com
+// @updateURL    https://github.com/Sayssound72/whatsapp-gpt-bitel/raw/main/whatsapp-gpt-bitel.user.js
+// @downloadURL  https://github.com/Sayssound72/whatsapp-gpt-bitel/raw/main/whatsapp-gpt-bitel.user.js
 // ==/UserScript==
 
 (function () {
