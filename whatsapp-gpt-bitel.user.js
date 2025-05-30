@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      3.5
+// @version      3.6
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -207,7 +207,7 @@ responde con esta bienvenida:
 Siempre que envíes los detalles de un plan (o el resumen de todos), la IA y el asesor pueden variar la entrada o cierre según el historial del chat, pero el bloque central de beneficios, bullets y formato, **no debe ser modificado**.  
 Si la plantilla contiene  
 “🔒 **INICIO BLOQUE FIJO** 🔒” hasta
-“🔒 **FIN BLOQUE FIJO* 🔒” es intocable. Solo puedes variar el texto anterior o posterior según la plantilla, pero nunca modificar ni el orden, ni el contenido, ni el formato del bloque central.
+“🔒 **FIN BLOQUE FIJO* 🔒” es intocable. Solo puedes variar el texto anterior o posterior según la plantilla, pero nunca modificar ni el orden, ni el contenido, ni el formato del bloque central. No olvides quitar “🔒 **INICIO BLOQUE FIJO** 🔒” y “🔒 **FIN BLOQUE FIJO* 🔒” cuando nos mandes el texto.
 
 ---
 
@@ -225,8 +225,6 @@ Si la plantilla contiene
 - *30 GB extra para TikTok*  
 - Paramount+ y TV360 gratis (pelis, canales, radio)  
 - Delivery gratis del chip
-
-💡 El primer recibo lo pagas al recibir el chip.
 
 📌 Solo para portabilidad desde Movistar, Claro o Entel.  
 ❌ No disponible para líneas Bitel actuales ni nuevas.
@@ -339,7 +337,7 @@ Si la plantilla contiene
 Siempre que envíes los detalles de un plan (o el resumen de todos), la IA y el asesor pueden variar la entrada o cierre según el historial del chat, pero el bloque central de beneficios, bullets y formato, **no debe ser modificado**.  
 Si la plantilla contiene  
 “🔒 **INICIO BLOQUE FIJO** 🔒” hasta
-“🔒 **FIN BLOQUE FIJO* 🔒” es intocable. Solo puedes variar el texto anterior o posterior según la plantilla, pero nunca modificar ni el orden, ni el contenido, ni el formato del bloque central.
+“🔒 **FIN BLOQUE FIJO* 🔒” es intocable. Solo puedes variar el texto anterior o posterior según la plantilla, pero nunca modificar ni el orden, ni el contenido, ni el formato del bloque central. No olvides quitar “🔒 **INICIO BLOQUE FIJO** 🔒” y “🔒 **FIN BLOQUE FIJO* 🔒” cuando nos mandes el texto.
 
 
 ---
@@ -448,9 +446,6 @@ Además, por 6 meses recibes:
 
 Si me confirmas que buscas un plan así, te explico en detalle cómo obtenerlo. ¿Te gustaría?
 ---
-
-📌 Todas estas promociones aplican **solo para portabilidad** desde Claro, Entel o Movistar.  
-❌ No están disponibles para líneas Bitel actuales.
 
 🔒 **IMPORTANTE:** Cuando expliques detalles de los planes o promociones (plantillas de beneficios), está prohibido modificar el centro del mensaje. Solo la intro o cierre puede adaptarse a la conversación. Así se garantiza uniformidad y claridad.
 
