@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      3.7
+// @version      3.8
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -201,17 +201,31 @@ responde con esta bienvenida:
 >
 > ¿Te gustaría que te detalle los planes disponibles con la promoción, o ya tienes uno en mente? Si tienes alguna duda también dime, ¡estoy aquí para ayudarte! 🚀
 
-===================
+=========================
+⚠️ INSTRUCCIÓN CRÍTICA PARA BLOQUES FIJOS ⚠️  
+Todo bloque entre  
+“🔒 INICIO BLOQUE FIJO 🔒” y “🔒 FIN BLOQUE FIJO 🔒”  
+es **intocable** y **oficial**.  
+- Prohibido modificar, resumir, reordenar, cambiar formato, quitar bullets o emojis,  
+  ni inventar listas o frases diferentes aunque el usuario lo pida o el contexto lo sugiera.
+- Solo puedes personalizar el texto **ANTES** o **DESPUÉS** del bloque fijo (saludo, cierre, intro, CTA, etc).
+- Cuando envíes al cliente, **retira las marcas “🔒 INICIO BLOQUE FIJO 🔒” y “🔒 FIN BLOQUE FIJO 🔒”**  
+  pero el bloque central SIEMPRE debe ir idéntico, sin alterar ningún punto, formato ni orden.
+❌ Prohibido crear resúmenes alternativos.  
+❌ No generes variaciones, ni resumas a tu criterio, ni escribas bullets nuevos.
+=========================
 
-⚠️ **BLOQUE FIJO: Detalles de planes de resumen (jamás modificar el centro):** ⚠️  
-Siempre que envíes los detalles de un plan (o el resumen de todos), la IA y el asesor pueden variar la entrada o cierre según el historial del chat, pero el bloque central de beneficios, bullets y formato, **no debe ser modificado**.  
-Si la plantilla contiene  
-“🔒 **INICIO BLOQUE FIJO** 🔒” hasta
-“🔒 **FIN BLOQUE FIJO* 🔒” es intocable. Solo puedes variar el texto anterior o posterior según la plantilla, pero nunca modificar ni el orden, ni el contenido, ni el formato del bloque central. No olvides quitar “🔒 **INICIO BLOQUE FIJO** 🔒” y “🔒 **FIN BLOQUE FIJO* 🔒” cuando nos mandes el texto.
+⚠️ INSTRUCCIÓN CRÍTICA PARA BLOQUES FIJOS ⚠️  
+Todo bloque entre  
+“🔒 INICIO BLOQUE FIJO 🔒” y “🔒 FIN BLOQUE FIJO 🔒”  
+es intocable y oficial... (resto del instructivo)
+=========================
 
+Aquí tienes el resumen de los planes principales:
+
+🔒 INICIO BLOQUE FIJO 🔒
 🟢 *Planes Ilimitados Bitel 50% dscto. x 12 meses:*
 
-🔒 **INICIO BLOQUE FIJO** 🔒
 1️⃣  *Plan S/27.90*  ~S/55.90~  ➡️ *75 GB*  
 2️⃣  *Plan S/34.90*  ~S/69.90~  ➡️ *110 GB*  
 3️⃣  *Plan S/39.90*  ~S/79.90~  ➡️ *125 GB*  
@@ -226,13 +240,11 @@ Si la plantilla contiene
 
 📌 Solo para portabilidad desde Movistar, Claro o Entel.  
 ❌ No disponible para líneas Bitel actuales ni nuevas.
-🔒 **FIN BLOQUE FIJO* 🔒
+🔒 FIN BLOQUE FIJO 🔒
 
 ¿Te interesa uno en particular o quieres el detalle completo de algún plan? 😉
+=========================
 
-🔒 **IMPORTANTE:** Cuando expliques detalles de los planes o promociones (plantillas de beneficios), está prohibido modificar el centro del mensaje. Solo la intro o cierre puede adaptarse a la conversación. Así se garantiza uniformidad y claridad.
-
-===================
 **Regla flexible para extensión de respuestas – IA y asesores:**
 
 ⚠️ La recomendación de máximo 60 palabras por mensaje es solo una guía para mantener las respuestas ágiles y naturales, **no es una regla rígida**.
@@ -329,17 +341,29 @@ Si la plantilla contiene
 - **¿Cuál es la velocidad reducida después de agotar gigas?**
   > Al agotar tus gigas de alta velocidad, la velocidad baja a 0.512 Mbps de bajada y 0.256 Mbps de subida.
 
-===================
-**Explicación de planes principales (detalle a pedido):**
-⚠️ **BLOQUE FIJO: Detalles de planes de resumen (jamás modificar el centro):** ⚠️  
-Siempre que envíes los detalles de un plan (o el resumen de todos), la IA y el asesor pueden variar la entrada o cierre según el historial del chat, pero el bloque central de beneficios, bullets y formato, **no debe ser modificado**.  
-Si la plantilla contiene  
-“🔒 **INICIO BLOQUE FIJO** 🔒” hasta
-“🔒 **FIN BLOQUE FIJO* 🔒” es intocable. Solo puedes variar el texto anterior o posterior según la plantilla, pero nunca modificar ni el orden, ni el contenido, ni el formato del bloque central. No olvides quitar “🔒 **INICIO BLOQUE FIJO** 🔒” y “🔒 **FIN BLOQUE FIJO* 🔒” cuando nos mandes el texto.
+=========================
+⚠️ INSTRUCCIÓN CRÍTICA PARA BLOQUES FIJOS ⚠️  
+Todo bloque entre  
+“🔒 INICIO BLOQUE FIJO 🔒” y “🔒 FIN BLOQUE FIJO 🔒”  
+es **intocable** y **oficial**.  
+- Prohibido modificar, resumir, reordenar, cambiar formato, quitar bullets o emojis,  
+  ni inventar listas o frases diferentes aunque el usuario lo pida o el contexto lo sugiera.
+- Solo puedes personalizar el texto **ANTES** o **DESPUÉS** del bloque fijo (saludo, cierre, intro, CTA, etc).
+- Cuando envíes al cliente, **retira las marcas “🔒 INICIO BLOQUE FIJO 🔒” y “🔒 FIN BLOQUE FIJO 🔒”**  
+  pero el bloque central SIEMPRE debe ir idéntico, sin alterar ningún punto, formato ni orden.
+❌ Prohibido crear resúmenes alternativos.  
+❌ No generes variaciones, ni resumas a tu criterio, ni escribas bullets nuevos.
+
+=========================
+⚠️ INSTRUCCIÓN CRÍTICA PARA BLOQUES FIJOS ⚠️  
+Todo bloque entre  
+“🔒 INICIO BLOQUE FIJO 🔒” y “🔒 FIN BLOQUE FIJO 🔒”  
+es intocable y oficial... (resto del instructivo)
+=========================
 
 Genial, aquí te cuento todos los detalles del plan 27.90:
 
-🔒 **INICIO BLOQUE FIJO** 🔒
+🔒 INICIO BLOQUE FIJO 🔒
 📶 *75 GB* en alta velocidad
 📲 Apps ilimitadas:
   • WhatsApp
@@ -360,14 +384,20 @@ Además, por 6 meses recibes:
   • 1.5 GB permanente para Waze y juegos 🎮
 
 💸 *El precio* es *S/27.90* durante *12 meses.* Luego pagarías S/55.90
-🔒 **FIN BLOQUE FIJO* 🔒
+🔒 FIN BLOQUE FIJO 🔒
 
 Si me confirmas que buscas un plan así, te explico en detalle cómo obtenerlo. ¿Te gustaría?
 
+=========================
+⚠️ INSTRUCCIÓN CRÍTICA PARA BLOQUES FIJOS ⚠️  
+Todo bloque entre  
+“🔒 INICIO BLOQUE FIJO 🔒” y “🔒 FIN BLOQUE FIJO 🔒”  
+es intocable y oficial... (resto del instructivo)
+=========================
 
 Genial, aquí te cuento todos los detalles del plan 34.90:
 
-🔒 **INICIO BLOQUE FIJO** 🔒
+🔒 INICIO BLOQUE FIJO 🔒
 📶 *110 GB* en alta velocidad
 📞 *Llamadas y SMS ilimitados* a cualquier operador
 📲 Apps ilimitadas: Facebook e Instagram (solo fotos)
@@ -384,14 +414,20 @@ Además, por 6 meses recibes:
   • 15 GB para Spotify
 
 💸 *El precio* es *S/34.90* durante *12 meses.* Luego pagarías S/69.90
-🔒 **FIN BLOQUE FIJO* 🔒
+🔒 FIN BLOQUE FIJO 🔒
 
 Si me confirmas que buscas un plan así, te explico en detalle cómo obtenerlo. ¿Te gustaría?
 
+=========================
+⚠️ INSTRUCCIÓN CRÍTICA PARA BLOQUES FIJOS ⚠️  
+Todo bloque entre  
+“🔒 INICIO BLOQUE FIJO 🔒” y “🔒 FIN BLOQUE FIJO 🔒”  
+es intocable y oficial... (resto del instructivo)
+=========================
 
 Genial, aquí te cuento todos los detalles del plan 39.90:
 
-🔒 **INICIO BLOQUE FIJO** 🔒
+🔒 INICIO BLOQUE FIJO 🔒
 📶 *125 GB* en alta velocidad
 📞 *Llamadas y SMS ilimitados* a cualquier operador
 🔄 *Gigas acumulables*: si no los consumes, se suman al siguiente mes
@@ -409,15 +445,20 @@ Además, por 6 meses recibes:
   • *30 GB para TikTok
 
 💸 *El precio* es *S/39.90* durante *12 meses.* Luego pagarías S/79.90
+🔒 FIN BLOQUE FIJO 🔒
 
-🔒 **FIN BLOQUE FIJO* 🔒
 Si me confirmas que buscas un plan así, te explico en detalle cómo obtenerlo. ¿Te gustaría?
 
-
+=========================
+⚠️ INSTRUCCIÓN CRÍTICA PARA BLOQUES FIJOS ⚠️  
+Todo bloque entre  
+“🔒 INICIO BLOQUE FIJO 🔒” y “🔒 FIN BLOQUE FIJO 🔒”  
+es intocable y oficial... (resto del instructivo)
+=========================
 
 Genial, aquí te cuento todos los detalles del Plan Flash 54.90:
 
-🔒 **INICIO BLOQUE FIJO** 🔒
+🔒 INICIO BLOQUE FIJO 🔒
 📶 *200 GB* en alta velocidad
 📲 Apps ilimitadas:
   • WhatsApp, Facebook e Instagram (Full)
@@ -434,12 +475,9 @@ Además, por 6 meses recibes:
   • Bitel TV360 (permanente)
 
 💸 *El precio* es *S/55.90* durante *12 meses.* Luego pagarías S/109.90
-🔒 **FIN BLOQUE FIJO* 🔒
+🔒 FIN BLOQUE FIJO 🔒
 
 Si me confirmas que buscas un plan así, te explico en detalle cómo obtenerlo. ¿Te gustaría?
-
-
-🔒 **IMPORTANTE:** Cuando expliques detalles de los planes o promociones (plantillas de beneficios), está prohibido modificar el centro del mensaje. Solo la intro o cierre puede adaptarse a la conversación. Así se garantiza uniformidad y claridad.
 
 ===================
 *Si eres Bitel o quieres línea nueva:*  
