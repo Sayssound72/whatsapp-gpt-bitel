@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      4.1
+// @version      4.2
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -14,17 +14,16 @@
     'use strict';
 
     // Pedir y guardar la API KEY de OpenAI solo una vez por navegador
-let apiKey = localStorage.getItem("openai_api_key") || "";
-if (!apiKey) {
-    apiKey = prompt("Por favor, ingresa tu API KEY de OpenAI:");
-    if (apiKey) {
-        localStorage.setItem("openai_api_key", apiKey);
-    } else {
-        alert("Necesitas ingresar la API KEY para usar la herramienta.");
-        throw new Error("API KEY requerida.");
+    let apiKey = localStorage.getItem("openai_api_key") || "";
+    if (!apiKey) {
+        apiKey = prompt("Por favor, ingresa tu API KEY de OpenAI:");
+        if (apiKey) {
+            localStorage.setItem("openai_api_key", apiKey);
+        } else {
+            alert("Necesitas ingresar la API KEY para usar la herramienta.");
+            throw new Error("API KEY requerida.");
+        }
     }
-}
-
 
     const observer = new MutationObserver(() => {
         const box = document.querySelector("footer [contenteditable]");
@@ -94,7 +93,16 @@ if (!apiKey) {
         boton.innerText = "GPT...";
 
         let mensajes = [
-            { role: "system", content: contextoBitel },
+            { 
+                role: "system", 
+                content: contextoBitel + `
+⚠️ INSTRUCCIÓN CRÍTICA PARA IA ⚠️
+- Si el usuario solicita el RESUMEN, BENEFICIOS o DETALLES de planes, condiciones de portabilidad, o cualquier bloque identificado como 'BLOQUE FIJO' en el contexto, DEBES COPIAR Y PEGAR exactamente ese bloque, incluyendo formato, emojis, negritas y saltos de línea tal como aparecen en el contexto oficial.
+- JAMÁS resumas, reorganices, ni pierdas formato. El texto debe coincidir carácter por carácter.
+- Solo puedes personalizar saludo y despedida fuera del bloque fijo.
+- Esta regla es prioritaria aunque el historial del chat sugiera lo contrario.
+                `
+            },
             { role: "system", content: "Historial reciente del chat:\n" + contexto }
         ];
 
@@ -133,18 +141,18 @@ if (!apiKey) {
 
     // GPT Manual: Solo reescribe el texto del cuadro, sin contexto, para ayuda en redacción y corrección
     function reescribirMensajeManual(modelo, boton) {
-    const inputBox = document.querySelector("footer [contenteditable]");
-    const texto = inputBox?.innerText.trim();
-    if (!texto) {
-        alert("Escribe un mensaje primero.");
-        return;
-    }
-    boton.disabled = true;
-    const originalLabel = boton.innerText;
-    boton.innerText = "GPT...";
+        const inputBox = document.querySelector("footer [contenteditable]");
+        const texto = inputBox?.innerText.trim();
+        if (!texto) {
+            alert("Escribe un mensaje primero.");
+            return;
+        }
+        boton.disabled = true;
+        const originalLabel = boton.innerText;
+        boton.innerText = "GPT...";
 
-    // PROMPT AVANZADO PARA MANUAL (contexto multi-rol)
-    const promptManual = `
+        // Puedes mejorar el prompt manual aquí según tu criterio y reglas de tono
+        const promptManual = `
 Eres un asistente experto para asesores Bitel en WhatsApp. 
 Antes de responder, analiza la intención del mensaje del asesor según estos criterios:
 
@@ -180,43 +188,41 @@ Nunca modifiques, resumas ni adaptes información protegida por candado.
 Recuerda: Si el texto parece una respuesta directa para cliente, solo corrige y adapta al tono Bitel.
 `;
 
-    const mensajes = [
-        { role: "system", content: contextoBitel + "\n" + promptManual },
-        { role: "user", content: texto }
-    ];
+        const mensajes = [
+            { role: "system", content: contextoBitel + "\n" + promptManual },
+            { role: "user", content: texto }
+        ];
 
-    GM_xmlhttpRequest({
-        method: "POST",
-        url: "https://api.openai.com/v1/chat/completions",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${apiKey}`
-        },
-        data: JSON.stringify({ model: modelo, messages: mensajes }),
-        onload: function (response) {
-            try {
-                const data = JSON.parse(response.responseText);
-                const reply = data.choices[0].message.content;
-                reemplazarTexto(inputBox, reply);
-            } catch (err) {
-                alert("Error al procesar la respuesta de GPT.");
-                console.error(err);
+        GM_xmlhttpRequest({
+            method: "POST",
+            url: "https://api.openai.com/v1/chat/completions",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${apiKey}`
+            },
+            data: JSON.stringify({ model: modelo, messages: mensajes }),
+            onload: function (response) {
+                try {
+                    const data = JSON.parse(response.responseText);
+                    const reply = data.choices[0].message.content;
+                    reemplazarTexto(inputBox, reply);
+                } catch (err) {
+                    alert("Error al procesar la respuesta de GPT.");
+                    console.error(err);
+                }
+                boton.disabled = false;
+                boton.innerText = originalLabel;
+            },
+            onerror: function (error) {
+                alert("Error de red o clave inválida.");
+                console.error(error);
+                boton.disabled = false;
+                boton.innerText = originalLabel;
             }
-            boton.disabled = false;
-            boton.innerText = originalLabel;
-        },
-        onerror: function (error) {
-            alert("Error de red o clave inválida.");
-            console.error(error);
-            boton.disabled = false;
-            boton.innerText = originalLabel;
-        }
-    });
-}
+        });
+    }
 
-
-    // --- CONTEXTO PERSONALIZADO BITEL AQUÍ ---
-    const contextoBitel = `
+     const contextoBitel = `
 
 Eres un asesor humano de una tienda autorizada de Bitel. Atiendes por WhatsApp a clientes nuevos que llegan desde TikTok, interesados en los planes con 50% de descuento. Eres dinámico y cercano, y utilizas herramientas de inteligencia artificial solo para mejorar la calidad, claridad y rapidez de tus respuestas. Todo mensaje es supervisado y personalizado por un asesor real antes de ser enviado.
 
