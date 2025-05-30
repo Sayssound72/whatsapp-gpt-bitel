@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      4
+// @version      4.1
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -133,49 +133,87 @@ if (!apiKey) {
 
     // GPT Manual: Solo reescribe el texto del cuadro, sin contexto, para ayuda en redacción y corrección
     function reescribirMensajeManual(modelo, boton) {
-        const inputBox = document.querySelector("footer [contenteditable]");
-        const texto = inputBox?.innerText.trim();
-        if (!texto) {
-            alert("Escribe un mensaje primero.");
-            return;
-        }
-        boton.disabled = true;
-        const originalLabel = boton.innerText;
-        boton.innerText = "GPT...";
-
-        const mensajes = [
-            { role: "system", content: contextoBitel + "\nSolo reescribe y mejora el siguiente mensaje para WhatsApp, manteniendo el significado y el estilo humano. No agregues información extra ni respondas con contexto de chat." },
-            { role: "user", content: texto }
-        ];
-
-        GM_xmlhttpRequest({
-            method: "POST",
-            url: "https://api.openai.com/v1/chat/completions",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${apiKey}`
-            },
-            data: JSON.stringify({ model: modelo, messages: mensajes }),
-            onload: function (response) {
-                try {
-                    const data = JSON.parse(response.responseText);
-                    const reply = data.choices[0].message.content;
-                    reemplazarTexto(inputBox, reply);
-                } catch (err) {
-                    alert("Error al procesar la respuesta de GPT.");
-                    console.error(err);
-                }
-                boton.disabled = false;
-                boton.innerText = originalLabel;
-            },
-            onerror: function (error) {
-                alert("Error de red o clave inválida.");
-                console.error(error);
-                boton.disabled = false;
-                boton.innerText = originalLabel;
-            }
-        });
+    const inputBox = document.querySelector("footer [contenteditable]");
+    const texto = inputBox?.innerText.trim();
+    if (!texto) {
+        alert("Escribe un mensaje primero.");
+        return;
     }
+    boton.disabled = true;
+    const originalLabel = boton.innerText;
+    boton.innerText = "GPT...";
+
+    // PROMPT AVANZADO PARA MANUAL (contexto multi-rol)
+    const promptManual = `
+Eres un asistente experto para asesores Bitel en WhatsApp. 
+Antes de responder, analiza la intención del mensaje del asesor según estos criterios:
+
+1. Si el texto es claramente una respuesta para enviar al cliente (por ejemplo, coordinación, aviso, saludo, seguimiento, cierre, explicación breve), SOLO corrige y mejora la redacción manteniendo las métricas oficiales de Bitel: cortesía, calidez, claridad, frases cortas, máximo 60 palabras, bloques visuales y emojis naturales. No agregues, inventes ni incluyas información adicional. Solo hazlo más profesional y humano.
+
+2. Si el asesor solicita información explícita (detallar, copiar, lista, enumera, explica, requisitos, condiciones, beneficios, qué incluye, pasos de proceso, dudas frecuentes de portabilidad o de planes), PEGA textualmente el bloque relacionado desde el contexto oficial de Bitel que acompaña este sistema. 
+Jamás resumas, modifiques, ni reordenes ningún bloque protegido por candado, ni inventes listas nuevas.
+
+3. Si la consulta es general y no corresponde al contexto Bitel (por ejemplo, explicación técnica, ayuda de otras plataformas, cultura general, etc.), responde usando tu conocimiento general, pero siempre con cortesía y tono profesional.
+
+Si no estás seguro, prioriza la mejora humana de la redacción del mensaje para WhatsApp.
+
+Ejemplos de petición de información de contexto:
+- "¿Cuáles son los requisitos para portabilidad?"
+- "Detalla los beneficios del plan 39.90."
+- "Lista los métodos de pago."
+- "¿Qué incluye el plan flash?"
+- "Explica el proceso de portabilidad."
+
+Ejemplos de texto para pulir:
+- "Sí hay cobertura en tu distrito, luego te contacto para iniciar portabilidad."
+- "Hola, mañana coordinamos la entrega. ¿Le parece bien a las 8pm?"
+- "Le confirmo que su número está apto para la promoción. ¿Avanzamos?"
+
+Ejemplos de consulta fuera de Bitel:
+- "¿Qué es una eSIM?"
+- "¿Cómo funciona el sistema de referidos de WhatsApp Business?"
+- "¿Cuánto es un giga en MB?"
+
+Solo pega bloques del contexto oficial si el asesor lo pide claramente. 
+Nunca modifiques, resumas ni adaptes información protegida por candado.
+
+Recuerda: Si el texto parece una respuesta directa para cliente, solo corrige y adapta al tono Bitel.
+`;
+
+    const mensajes = [
+        { role: "system", content: contextoBitel + "\n" + promptManual },
+        { role: "user", content: texto }
+    ];
+
+    GM_xmlhttpRequest({
+        method: "POST",
+        url: "https://api.openai.com/v1/chat/completions",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${apiKey}`
+        },
+        data: JSON.stringify({ model: modelo, messages: mensajes }),
+        onload: function (response) {
+            try {
+                const data = JSON.parse(response.responseText);
+                const reply = data.choices[0].message.content;
+                reemplazarTexto(inputBox, reply);
+            } catch (err) {
+                alert("Error al procesar la respuesta de GPT.");
+                console.error(err);
+            }
+            boton.disabled = false;
+            boton.innerText = originalLabel;
+        },
+        onerror: function (error) {
+            alert("Error de red o clave inválida.");
+            console.error(error);
+            boton.disabled = false;
+            boton.innerText = originalLabel;
+        }
+    });
+}
+
 
     // --- CONTEXTO PERSONALIZADO BITEL AQUÍ ---
     const contextoBitel = `
