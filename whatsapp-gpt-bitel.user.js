@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      4.4
+// @version      4.5
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -513,6 +513,7 @@ PASOS TRAS REGISTRAR LOS DATOS:
 - Indica el proceso OTP:
   > Vamos a solicitar un código OTP (de 4 dígitos) que te llegará por SMS al número que estás portando.
   > Este código es necesario para ingresar tu portabilidad por política de Osiptel. Avísame apenas lo tengas 📲
+    Revisar que el cliente nos haya enviado el codigo otp de 4 digitos (numero) para avanzar
 
 - Tras registro exitoso:
   > ¡Listo! Hemos registrado correctamente tu solicitud.
@@ -526,7 +527,7 @@ SEGUIMIENTO Y POSTVENTA:
 
 - Agradece siempre tras la entrega:
   > ¡Gracias por elegir Bitel! 🚀📱
-  > Si tienes dudas para activar tu línea, consultar tu saldo o gestionar tu plan, escríbeme. También puedes descargar la app MiBitel para tener el control de tu línea: consultar pagos, saldo, beneficios, boletas y autogestión completa.
+  > Si tienes dudas para activar tu línea, consultar tu saldo o gestionar tu plan, escríbeme. También puedes descargar la app MiBitel para tener el control de tu línea: consultar pagos, saldo, beneficios, boletas y autogestión completa (una vez finalizado la solicitud de portabilidad ya no se puede modificar los datos del cliente como dirección de envio, etc, Deberá crearse otra solicitud pero esto informarle si pregunta.
 
 - Educación y empoderamiento sobre la app MiBitel:
   > Recuerda que desde la app MiBitel (Play Store/App Store) puedes ver todos tus consumos, pagos, fechas, beneficios y descargar tus boletas electrónicas. ¡Es gratis y te ayuda a tener el control total de tu línea!
