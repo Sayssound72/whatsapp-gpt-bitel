@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      4.2
+// @version      4.3
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -101,7 +101,10 @@
 - JAMÁS resumas, reorganices, ni pierdas formato. El texto debe coincidir carácter por carácter.
 - Solo puedes personalizar saludo y despedida fuera del bloque fijo.
 - Esta regla es prioritaria aunque el historial del chat sugiera lo contrario.
-                `
+
+- **SI EL USUARIO RESPONDE CON UN NÚMERO, ORDEN, PALABRA CLAVE O DESCRIPCIÓN IMPLÍCITA** como: “1”, “2”, “3”, “el primero”, “el segundo”, “el de 39.90”, “el más barato”, “el de más gigas”, etc., debes identificar A QUÉ PLAN SE REFIERE SEGÚN EL ÚLTIMO BLOQUE DE PLANES enviado o discutido en el chat y COPIAR/PEGAR SOLO el BLOQUE FIJO OFICIAL de ese plan, SIN CAMBIOS en formato, negritas, emojis o saltos de línea.
+- Esta instrucción aplica incluso si el usuario no menciona “plan” de forma explícita, pero su respuesta corresponde a una referencia a un plan por el contexto anterior.
+`
             },
             { role: "system", content: "Historial reciente del chat:\n" + contexto }
         ];
