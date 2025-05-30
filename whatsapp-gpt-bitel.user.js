@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      3.3
+// @version      3.4
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -219,6 +219,8 @@ Todo lo que está entre
 “==========================
 🔒 **FIN BLOQUE FIJO* 🔒
 ==========================.
+
+---
 
 🟢 *Planes Ilimitados Bitel 50% dscto. x 12 meses:*
 
