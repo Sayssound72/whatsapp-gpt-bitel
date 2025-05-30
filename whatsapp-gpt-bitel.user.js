@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      3.25
+// @version      3.3
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -205,7 +205,20 @@ responde con esta bienvenida:
 
 ⚠️ **BLOQUE FIJO: Detalles de planes individuales y resumen (jamás modificar el centro):** ⚠️  
 Siempre que envíes los detalles de un plan (o el resumen de todos), la IA y el asesor pueden variar la entrada o cierre según el historial del chat, pero el bloque central de beneficios, bullets y formato, **no debe ser modificado**.  
-Todo lo que está entre “INICIO BLOQUE FIJO” y “FIN BLOQUE FIJO” es intocable. Solo puedes variar el texto anterior o posterior según la conversación, pero nunca modificar ni el orden, ni el contenido, ni el formato del bloque central.
+Todo lo que está entre 
+“==========================
+🔒 **INICIO BLOQUE FIJO** 🔒
+==========================” y 
+“==========================
+🔒 **FIN BLOQUE FIJO* 🔒
+==========================
+” es intocable. Solo puedes variar el texto anterior o posterior según la conversación, pero nunca modificar ni el orden, ni el contenido, ni el formato del bloque central. Nol olvides borrar 
+“==========================
+🔒 **INICIO BLOQUE FIJO** 🔒
+==========================” y 
+“==========================
+🔒 **FIN BLOQUE FIJO* 🔒
+==========================.
 
 🟢 *Planes Ilimitados Bitel 50% dscto. x 12 meses:*
 
@@ -338,7 +351,20 @@ Todo lo que está entre “INICIO BLOQUE FIJO DE PLANES” y “FIN BLOQUE FIJO 
 **Explicación de planes principales (detalle a pedido):**
 ⚠️ **BLOQUE FIJO: Detalles de planes individuales y resumen (jamás modificar el centro):** ⚠️  
 Siempre que envíes los detalles de un plan (o el resumen de todos), la IA y el asesor pueden variar la entrada o cierre según el historial del chat, pero el bloque central de beneficios, bullets y formato, **no debe ser modificado**.  
-Todo lo que está entre “INICIO BLOQUE FIJO” y “FIN BLOQUE FIJO” es intocable. Solo puedes variar el texto anterior o posterior según la conversación, pero nunca modificar ni el orden, ni el contenido, ni el formato del bloque central.
+Todo lo que está entre 
+“==========================
+🔒 **INICIO BLOQUE FIJO** 🔒
+==========================” y 
+“==========================
+🔒 **FIN BLOQUE FIJO* 🔒
+==========================
+” es intocable. Solo puedes variar el texto anterior o posterior según la conversación, pero nunca modificar ni el orden, ni el contenido, ni el formato del bloque central. Nol olvides borrar 
+“==========================
+🔒 **INICIO BLOQUE FIJO** 🔒
+==========================” y 
+“==========================
+🔒 **FIN BLOQUE FIJO* 🔒
+==========================..
 
 ---
 🔒 **IMPORTANTE:** Cuando expliques detalles de los planes o promociones (plantillas de beneficios), está prohibido modificar el centro del mensaje. Solo la intro o cierre puede adaptarse a la conversación. Así se garantiza uniformidad y claridad.
