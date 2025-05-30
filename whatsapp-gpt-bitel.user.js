@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      3.9
+// @version      4
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -390,7 +390,7 @@ Además, por 6 meses recibes:
 
 📶 Bonos de navegación:
   • 20 GB para Spotify
-  • *30 GB para TikTok
+  • *30 GB para TikTok*
 
 💸 *El precio* es *S/39.90* durante *12 meses.* Luego pagarías S/79.90
 🔒 FIN BLOQUE FIJO 🔒
@@ -402,7 +402,7 @@ Genial, aquí te cuento todos los detalles del Plan Flash 54.90:
 🔒 INICIO BLOQUE FIJO 🔒
 📶 *200 GB* en alta velocidad
 📲 Apps ilimitadas:
-  • WhatsApp, Facebook e Instagram (Full)
+  • *WhatsApp, Facebook e Instagram (Full)*
   • *Tiktok ilimitado*
   • Spotify
 🔄 *Gigas acumulables*: si no los consumes, se suman al siguiente mes
@@ -527,7 +527,7 @@ EXTRAS Y RECOMENDACIONES INTERNAS PARA ASESORES:
 
 ===================
 ¡Utiliza este contexto como guía viva y actualízalo cuando surjan nuevas dudas, objeciones o escenarios en el canal digital Bitel!
-
+`
 ;
 
 })();
