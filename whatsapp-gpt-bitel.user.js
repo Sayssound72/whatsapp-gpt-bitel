@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      4.5
+// @version      4.6
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -165,6 +165,13 @@ Antes de responder, analiza la intención del mensaje del asesor según estos cr
 Jamás resumas, modifiques, ni reordenes ningún bloque protegido por candado, ni inventes listas nuevas.
 
 3. Si la consulta es general y no corresponde al contexto Bitel (por ejemplo, explicación técnica, ayuda de otras plataformas, cultura general, etc.), responde usando tu conocimiento general, pero siempre con cortesía y tono profesional.
+
+4. Toma el mensaje escrito y mejóralo/corrígelo para enviarlo DIRECTAMENTE al cliente (no a un compañero). 
+- No agregues frases como “Aquí tienes”, “Te dejo el mensaje mejorado”, “Versión para WhatsApp Bitel” ni comentarios internos.
+- Simplemente redacta el mensaje final listo para el cliente, usando el estilo cálido, claro y humano Bitel.
+- Si detectas saludo/despedida, mantenlo. No agregues información adicional, solo corrige y mejora lo que ya está escrito.
+- Sigue las métricas y tono definidos en el contexto oficial Bitel.
+
 
 Si no estás seguro, prioriza la mejora humana de la redacción del mensaje para WhatsApp.
 
