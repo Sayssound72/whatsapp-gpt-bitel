@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      3.6
+// @version      3.7
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -209,8 +209,6 @@ Si la plantilla contiene
 “🔒 **INICIO BLOQUE FIJO** 🔒” hasta
 “🔒 **FIN BLOQUE FIJO* 🔒” es intocable. Solo puedes variar el texto anterior o posterior según la plantilla, pero nunca modificar ni el orden, ni el contenido, ni el formato del bloque central. No olvides quitar “🔒 **INICIO BLOQUE FIJO** 🔒” y “🔒 **FIN BLOQUE FIJO* 🔒” cuando nos mandes el texto.
 
----
-
 🟢 *Planes Ilimitados Bitel 50% dscto. x 12 meses:*
 
 🔒 **INICIO BLOQUE FIJO** 🔒
@@ -339,9 +337,6 @@ Si la plantilla contiene
 “🔒 **INICIO BLOQUE FIJO** 🔒” hasta
 “🔒 **FIN BLOQUE FIJO* 🔒” es intocable. Solo puedes variar el texto anterior o posterior según la plantilla, pero nunca modificar ni el orden, ni el contenido, ni el formato del bloque central. No olvides quitar “🔒 **INICIO BLOQUE FIJO** 🔒” y “🔒 **FIN BLOQUE FIJO* 🔒” cuando nos mandes el texto.
 
-
----
-
 Genial, aquí te cuento todos los detalles del plan 27.90:
 
 🔒 **INICIO BLOQUE FIJO** 🔒
@@ -369,7 +364,6 @@ Además, por 6 meses recibes:
 
 Si me confirmas que buscas un plan así, te explico en detalle cómo obtenerlo. ¿Te gustaría?
 
----
 
 Genial, aquí te cuento todos los detalles del plan 34.90:
 
@@ -394,7 +388,6 @@ Además, por 6 meses recibes:
 
 Si me confirmas que buscas un plan así, te explico en detalle cómo obtenerlo. ¿Te gustaría?
 
----
 
 Genial, aquí te cuento todos los detalles del plan 39.90:
 
@@ -420,7 +413,6 @@ Además, por 6 meses recibes:
 🔒 **FIN BLOQUE FIJO* 🔒
 Si me confirmas que buscas un plan así, te explico en detalle cómo obtenerlo. ¿Te gustaría?
 
----
 
 
 Genial, aquí te cuento todos los detalles del Plan Flash 54.90:
@@ -445,7 +437,7 @@ Además, por 6 meses recibes:
 🔒 **FIN BLOQUE FIJO* 🔒
 
 Si me confirmas que buscas un plan así, te explico en detalle cómo obtenerlo. ¿Te gustaría?
----
+
 
 🔒 **IMPORTANTE:** Cuando expliques detalles de los planes o promociones (plantillas de beneficios), está prohibido modificar el centro del mensaje. Solo la intro o cierre puede adaptarse a la conversación. Así se garantiza uniformidad y claridad.
 
