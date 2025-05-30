@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      4.3
+// @version      4.4
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -370,6 +370,12 @@ MANEJO DE DUDAS FRECUENTES (SOLO EN CASO DE CONSULTA):
 - **¿Cuál es la velocidad reducida después de agotar gigas?**
   > Al agotar tus gigas de alta velocidad, la velocidad baja a 0.512 Mbps de bajada y 0.256 Mbps de subida.
 
+- **¿El plan Flash también es internet ilimitado?**
+  > El plan Flash ofrece una gran cantidad de GB en alta velocidad. Cuando se terminen, solo tendrás acceso ilimitado a las aplicaciones incluidas (WhatsApp, Facebook, Instagram, TikTok y Spotify). Para más internet fuera de esas apps, puedes recargar y comprar paquetes adicionales. El siguiente mes se renuevan tus beneficios.
+
+- **¿Cómo funcionan las gigas acumulables?**
+  > Si no consumes todos tus GB en el mes, se acumulan para el siguiente ciclo siempre que pagues tu recibo a tiempo. Si te atrasas en el pago, pierdes el beneficio acumulado. Puedes acumular hasta 1000 GB como máximo.
+  
 =========================
 DETALLES DE PLANES (BLOQUES FIJOS INDIVIDUALES, JAMÁS MODIFICAR NADA):
 
