@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp GPT Bitel (GPT-4.1 Automate & Manual)
 // @namespace    https://openai.com
-// @version      5.1
+// @version      5.2
 // @description  Respuestas automáticas o asistidas para Bitel, usando GPT-4.1, con acotación personalizada o reescritura manual.
 // @match        https://web.whatsapp.com/*
 // @grant        GM_xmlhttpRequest
@@ -112,8 +112,8 @@
             return btn;
         }
 
-        const btnAutomate = createButton("gpt-automate-btn", "GPT Automate", "#2A9D8F", () => reescribirMensajeAutomate("o4-mini", btnAutomate));
-        const btnManual = createButton("gpt-manual-btn", "GPT Manual", "#E76F51", () => reescribirMensajeManual("o4-mini", btnManual));
+        const btnAutomate = createButton("gpt-automate-btn", "GPT Automate", "#2A9D8F", () => reescribirMensajeAutomate("gpt-4.1-mini", btnAutomate));
+        const btnManual = createButton("gpt-manual-btn", "GPT Manual", "#E76F51", () => reescribirMensajeManual("gpt-4.1-mini", btnManual));
 
         const container = document.createElement("div");
         container.style.display = "flex";
