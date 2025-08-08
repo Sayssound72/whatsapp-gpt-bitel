@@ -112,8 +112,8 @@
             return btn;
         }
 
-        const btnAutomate = createButton("gpt-automate-btn", "GPT Automate", "#2A9D8F", () => reescribirMensajeAutomate("gpt-4.1-mini", btnAutomate));
-        const btnManual = createButton("gpt-manual-btn", "GPT Manual", "#E76F51", () => reescribirMensajeManual("gpt-4.1-mini", btnManual));
+        const btnAutomate = createButton("gpt-automate-btn", "GPT Automate", "#2A9D8F", () => reescribirMensajeAutomate("gpt-5.1-mini", btnAutomate));
+        const btnManual = createButton("gpt-manual-btn", "GPT Manual", "#E76F51", () => reescribirMensajeManual("gpt-5.1-mini", btnManual));
 
         const container = document.createElement("div");
         container.style.display = "flex";
